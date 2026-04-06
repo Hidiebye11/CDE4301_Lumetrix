@@ -11,6 +11,53 @@ const NAV_CONFIG = {
       label: "Contents",
       href: "Table_of_Contents.html",
       matchPages: ["Table_of_Contents"],
+      subs: [
+        {
+          num: "—",
+          label: "Table of Contents",
+          href: "Table_of_Contents.html",
+        },
+        {
+          num: "1",
+          label: "Introduction",
+          href: "Section_1.html",
+        },
+        {
+          num: "2",
+          label: "Development of Case Study",
+          href: "Section_2.html",
+        },
+        {
+          num: "3",
+          label: "Experimental Data Collection",
+          href: "Section_3.html",
+        },
+        {
+          num: "4",
+          label: "Architectural Design for PIML",
+          href: "Section_4.html",
+        },
+        {
+          num: "5",
+          label: "Physics Guided Enhancements",
+          href: "Section_5.html",
+        },
+        {
+          num: "6",
+          label: "Current Limitations &amp; Future Works",
+          href: "Section_6.html",
+        },
+        {
+          num: "7",
+          label: "Conclusion",
+          href: "Section_7.html",
+        },
+        {
+          num: "A",
+          label: "Appendix",
+          href: "Appendix.html",
+        },
+      ],
     },
     {
       label: "Introduction",
@@ -212,19 +259,60 @@ const NAV_CONFIG = {
       ],
     },
     {
-      label: "Future Works",
+      label: "Current Limitations & Future Works",
       href: "Section_6.html",
       matchPages: ["Section_6"],
+      subs: [
+        {
+          num: "6.1",
+          label: "Overview",
+          href: "Section_6.html#future-works",
+        },
+        {
+          num: "—",
+          label: "References &amp; Notes",
+          href: "Section_6.html#references",
+        },
+      ],
     },
     {
       label: "Conclusion",
       href: "Section_7.html",
       matchPages: ["Section_7"],
+      subs: [
+        {
+          num: "7.1",
+          label: "Overview",
+          href: "Section_7.html#conclusion",
+        },
+        {
+          num: "—",
+          label: "References &amp; Notes",
+          href: "Section_7.html#references",
+        },
+      ],
     },
     {
       label: "Appendix",
       href: "Appendix.html",
       matchPages: ["Appendix"],
+      subs: [
+        {
+          num: "A",
+          label: "Details of Different Zones",
+          href: "Appendix.html#appendix-a",
+        },
+        {
+          num: "B",
+          label: "Experimental Procedure",
+          href: "Appendix.html#appendix-b",
+        },
+        {
+          num: "C",
+          label: "Full Derivation of Governing Equation",
+          href: "Appendix.html#appendix-c",
+        },
+      ],
     },
   ],
 

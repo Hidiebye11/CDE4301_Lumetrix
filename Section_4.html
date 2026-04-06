@@ -1706,7 +1706,14 @@
         </p>
 
         <figure class="report-figure full-bleed">
-          <img src="./assets/images/Figure_4-16.png" alt="Plot of Concentration against Time diagram">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; width: 100%;">
+            <div style="position: relative; min-height: 300px;">
+              <canvas id="figure4_16_co2" aria-label="CO2 concentration against time"></canvas>
+            </div>
+            <div style="position: relative; min-height: 300px;">
+              <canvas id="figure4_16_naoh" aria-label="NaOH concentration against time"></canvas>
+            </div>
+          </div>
           <figcaption>
             <span class="fig-label">Figure 4.16</span>
             Plot of Concentration against Time
@@ -2661,6 +2668,114 @@
     <a class="page-nav-btn" href="Section_5.html">Next →</a>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    (function () {
+      if (typeof Chart === "undefined") return;
+
+      function renderLineChart(canvasId, title, values, yMin, yMax, yLabel) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+
+        new Chart(canvas, {
+          type: "line",
+          data: {
+            labels: [0, 4, 8, 12, 16],
+            datasets: [{
+              label: yLabel,
+              data: values,
+              borderColor: "#111827",
+              backgroundColor: "#111827",
+              borderWidth: 2.5,
+              tension: 0.32,
+              fill: false,
+              pointRadius: 4,
+              pointHoverRadius: 5,
+              pointBackgroundColor: "#111827",
+              pointBorderColor: "#111827"
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: false
+              },
+              title: {
+                display: true,
+                text: title,
+                color: "#334155",
+                font: {
+                  size: 15,
+                  weight: "600"
+                },
+                padding: {
+                  top: 8,
+                  bottom: 16
+                }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    return yLabel + ": " + Number(context.raw).toPrecision(4);
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: "Time (min)"
+                },
+                ticks: {
+                  stepSize: 2
+                },
+                grid: {
+                  display: false
+                }
+              },
+              y: {
+                min: yMin,
+                max: yMax,
+                title: {
+                  display: true,
+                  text: "Concentration (mol/L)"
+                },
+                ticks: {
+                  callback: function (value) {
+                    return Number(value).toPrecision(3);
+                  }
+                },
+                grid: {
+                  color: "rgba(148, 163, 184, 0.25)"
+                }
+              }
+            }
+          }
+        });
+      }
+
+      renderLineChart(
+        "figure4_16_co2",
+        "CO2 Concentration Profile",
+        [0.0000, 0.0163, 0.0138, 0.0135, 0.0132],
+        0,
+        0.018,
+        "CO2 concentration"
+      );
+
+      renderLineChart(
+        "figure4_16_naoh",
+        "NaOH Concentration Profile",
+        [0.0000, 0.00037, 0.00037, 0.000355, 0.000353],
+        0,
+        0.00045,
+        "NaOH concentration"
+      );
+    })();
+  </script>
   <script src="./assets/index.js"></script>
 </body>
 
