@@ -238,16 +238,6 @@
       <div class="section-body">
         <figure class="report-figure full-bleed">
           <div style="position: relative; width: 100%; min-height: 420px;">
-            <canvas id="figure7_1_chart" aria-label="Summary of R-squared performance with 100 K-fold"></canvas>
-          </div>
-          <figcaption>
-            <span class="fig-label">Figure 7.1</span>
-            Summary of R<sup>2</sup> Performance with 100 K-fold
-          </figcaption>
-        </figure>
-
-        <figure class="report-figure full-bleed">
-          <div style="position: relative; width: 100%; min-height: 420px;">
             <canvas id="figure7_2_chart" aria-label="Summary of MSE performance with 100 K-fold"></canvas>
           </div>
           <figcaption>
@@ -257,16 +247,11 @@
         </figure>
 
         <p>
-          All physics-informed models outperform the baseline RNN and NODE-ED in both R<sup>2</sup> and MSE. The best
-          performance
-          is achieved by NODE-ED-Uncoupled (SS-C-PD), with improvements of 6.15% and 9.87% over RNN, and 5.03% and
-          12.15% over NODE-ED in R<sup>2</sup> and MSE respectively. Additionally, the highest reported R<sup>2</sup>
-          and MSE
-          values for
-          NODE-ED-Uncoupled Bagging are at 0.773 ± 0.0882 and 0.239 ± 0.070 respectively. Notably, architectural
-          modifications alone also yield improvements, with NODE-ED-Uncoupled outperforming NODE-ED by 3.75% in
-          R<sup>2</sup> and
-          7.54% in MSE.
+          Across the evaluated models, physics-guided enhancements consistently reduce test MSE relative to the baseline
+          RNN and NODE-ED. The lowest mean test MSE is achieved by NODE-ED-Uncoupled (SS-C-PD) at 0.2329, compared to
+          0.2564 for RNN and 0.2651 for NODE-ED (approximately 9.2% and 12.1% lower, respectively). Additionally,
+          architectural modification alone improves accuracy, with NODE-ED-Uncoupled reducing mean MSE to 0.2451 from
+          0.2651 for NODE-ED.
         </p>
 
         <p>
@@ -462,23 +447,13 @@
         ];
 
         renderBarChart(
-          "figure7_1_chart",
-          labels,
-          [0.6569, 0.6639, 0.6888, 0.6936, 0.6973],
-          "Test R²",
-          0.6,
-          0.8,
-          "Test R²: "
-        );
-
-        renderBarChart(
           "figure7_2_chart",
           labels,
           [0.2564, 0.2651, 0.2451, 0.2387, 0.2329],
-          "Test MSE",
+          "MSE",
           0.2,
           0.32,
-          "Test MSE: "
+          "MSE: "
         );
       })();
     </script>

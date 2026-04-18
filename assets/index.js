@@ -38,14 +38,14 @@ const NAV_CONFIG = {
           href: "Section_3.html",
         },
         {
-          num: "4",
+          num: "4A",
           label: "Architectural Design for PIML",
-          href: "Section_4.html",
+          href: "Section_4A.html",
         },
         {
-          num: "5",
+          num: "5A",
           label: "Physics Guided Enhancements",
-          href: "Section_5.html",
+          href: "Section_5A.html",
         },
         {
           num: "6",
@@ -139,127 +139,122 @@ const NAV_CONFIG = {
       ],
     },
     {
-      label: "Architectural Design for PIML",
-      href: "Section_4.html",
-      matchPages: ["Section_4"],
+      label: "Architectural Design for PIML (Section 4A)",
+      href: "Section_4A.html",
+      matchPages: ["Section_4A", "Section_4"],
       subs: [
         {
           num: "4.1",
           label: "Overview",
-          href: "Section_4.html#4-1",
+          href: "Section_4A.html#4-1",
         },
         {
           num: "4.2",
           label: "Recurrent Neural Network",
-          href: "Section_4.html#4-2",
+          href: "Section_4A.html#4-2",
           subsubs: [
             {
               num: "4.2.1",
               label: "Gated Recurrent Units",
-              href: "Section_4.html#4-2-1",
+              href: "Section_4A.html#4-2-1",
             },
             {
               num: "4.2.2",
               label: "Long Short Term Memory",
-              href: "Section_4.html#4-2-2",
+              href: "Section_4A.html#4-2-2",
             },
           ],
         },
         {
           num: "4.3",
           label: "Neural Ordinary Differential Equation (NODE)",
-          href: "Section_4.html#4-3",
+          href: "Section_4A.html#4-3",
           subsubs: [
             {
               num: "4.3.1",
               label: "NODE-ED",
-              href: "Section_4.html#4-3-1",
+              href: "Section_4A.html#4-3-1",
             },
             {
               num: "4.3.2",
               label: "NODE-ED-Uncoupled",
-              href: "Section_4.html#4-3-2",
+              href: "Section_4A.html#4-3-2",
             },
             {
               num: "4.3.3",
               label: "NODE-Context",
-              href: "Section_4.html#4-3-3",
+              href: "Section_4A.html#4-3-3",
             },
             {
               num: "4.3.4",
               label: "NODE-Context-Uncoupled",
-              href: "Section_4.html#4-3-4",
+              href: "Section_4A.html#4-3-4",
             },
           ],
         },
         {
           num: "4.4",
           label: "Performance Metric & Statistical Significance",
-          href: "Section_4.html#4-4",
+          href: "Section_4A.html#4-4",
         },
         {
           num: "4.5",
           label: "Training Methodology",
-          href: "Section_4.html#4-5",
+          href: "Section_4A.html#4-5",
           subsubs: [
             {
               num: "4.5.1",
               label: "Hyperparameter Optimisation",
-              href: "Section_4.html#4-5-1",
+              href: "Section_4A.html#4-5-1",
             },
             {
               num: "4.5.2",
               label: "K-fold Cross-validation",
-              href: "Section_4.html#4-5-2",
+              href: "Section_4A.html#4-5-2",
             },
             {
               num: "4.5.3",
               label: "100 repeated K-fold",
-              href: "Section_4.html#4-5-3",
-            },
-            {
-              num: "4.5.4",
-              label: "Bagging",
-              href: "Section_4.html#4-5-4",
+              href: "Section_4A.html#4-5-3",
             },
           ],
         },
         {
           num: "4.6",
           label: "Analysis of results for RNN Variants",
-          href: "Section_4.html#4-6",
+          href: "Section_4A.html#4-6",
         },
         {
           num: "4.7",
           label: "Analysis of results for NODE variants",
-          href: "Section_4.html#4-7",
+          href: "Section_4A.html#4-7",
         },
         {
           num: "4.8",
           label: "Comparison between RNN and NODE",
-          href: "Section_4.html#4-8",
+          href: "Section_4A.html#4-8",
         },
       ],
     },
     {
-      label: "Physics Guided Enhancements",
-      href: "Section_5.html",
-      matchPages: ["Section_5"],
+      label: "Physics Guided Enhancements (Section 5A)",
+      href: "Section_5A.html",
+      matchPages: ["Section_5A", "Section_5"],
       subs: [
         {
           num: "5.1",
           label: "Steady State Constraint with Parameter Discovery (SS-PD)",
-          href: "Section_5.html#5-1",
+          href: "Section_5A.html#5-1",
         },
         {
           num: "5.2",
           label: "Steady State Collocation with Parameter Discovery (SS-C-PD)",
-          href: "Section_5.html#5-2",
+          href: "Section_5A.html#5-2",
         },
         {
           num: "5.3",
           label: "Analysis of results for Physics Guided Enhancements",
-          href: "Section_5.html#5-3",
+          href: "Section_5A.html#5-3",
         },
       ],
     },
@@ -683,3 +678,4 @@ const NAV_CONFIG = {
     window.scrollTo({ top: 0, behavior: "smooth" }),
   );
 })();
+
